@@ -8,22 +8,23 @@ const BundleAnalyzerPlugin =
 module.exports = {
   entry: {
     a: "./src/index.js",
-    //   b: "./src/index2.js"
+    // b: "./src/index2.js",
   },
   plugins: [new BundleAnalyzerPlugin()],
   optimization: {
     runtimeChunk: {
       name: "runtime",
     },
-    //   splitChunks: {
-    //     minSize: {
-    //       javascript: 0,
-    //       style: 0,
-    //     },
-    //     maxSize: {
-    //       javascript: 110000,
-    //       style: 110000,
-    //     },
-    //   },
+    splitChunks: {
+      chunks: "all",
+      minSize: {
+        javascript: 350000,
+        style: 0,
+      },
+      //   maxSize: {
+      //     javascript: 120000,
+      //     style: 0,
+      //   },
+    },
   },
 };
