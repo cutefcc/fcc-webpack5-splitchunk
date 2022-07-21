@@ -1,4 +1,5 @@
 const data = "车车";
+// import data2 from "./data2.js";
 
 // import("./data2.js").then((data2) => {
 //   console.log(data2);
